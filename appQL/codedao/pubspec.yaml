@@ -1,0 +1,25 @@
+name: codedao
+description: caigivay
+
+environment:
+  sdk: '^3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.0.0+4
+  path_provider: ^2.0.11
+  path: ^1.8.0
+  shared_preferences: ^2.0.15
+  flutter_local_notifications:  ^17.2.3
+  
+  qr_code_scanner: ^1.0.0
+  image_picker: ^0.8.7+3
+  qr_code_tools: ^1.0.3
+
+flutter:
+  uses-material-design: true
+
+platforms:
+  linux:
+    enabled: false
