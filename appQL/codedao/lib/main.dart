@@ -124,6 +124,7 @@ class _LoginPageState extends State<LoginPage> {
 }
 
 // 2. Trang chủ: Menu chính của phần mềm
+// Mã số sinh viên: 22139068 - Nguyễn Xuân Thịnh
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -131,23 +132,36 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Quản lý kho"),
       ),
-      body: ListView(
+      body: Column(
         children: [
-          ListTile(
-            title: Text("Khai báo sản phẩm"),
-            onTap: () => Navigator.pushNamed(context, '/product'),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "Mã số sinh viên: 22139068 - Nguyễn Xuân Thịnh",
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            ),
           ),
-          ListTile(
-            title: Text("Nhập hàng (Kho)"),
-            onTap: () => Navigator.pushNamed(context, '/import'),
-          ),
-          ListTile(
-            title: Text("Xuất hàng (Kho)"),
-            onTap: () => Navigator.pushNamed(context, '/export'),
-          ),
-          ListTile(
-            title: Text("Báo cáo tồn kho"),
-            onTap: () => Navigator.pushNamed(context, '/report'),
+          Expanded(
+            child: ListView(
+              children: [
+                ListTile(
+                  title: Text("Khai báo sản phẩm"),
+                  onTap: () => Navigator.pushNamed(context, '/product'),
+                ),
+                ListTile(
+                  title: Text("Nhập hàng (Kho)"),
+                  onTap: () => Navigator.pushNamed(context, '/import'),
+                ),
+                ListTile(
+                  title: Text("Xuất hàng (Kho)"),
+                  onTap: () => Navigator.pushNamed(context, '/export'),
+                ),
+                ListTile(
+                  title: Text("Báo cáo tồn kho"),
+                  onTap: () => Navigator.pushNamed(context, '/report'),
+                ),
+              ],
+            ),
           ),
         ],
       ),
